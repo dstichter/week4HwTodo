@@ -1,0 +1,18 @@
+/* Styles for Stack Overflow Recreation Project
+by Darryl Mendonez, David Stichter, Sean Conaty, and Shreyans Patel */
+
+.top-questions-stats {
+  text-align: center;
+}
+
+.2nd-line {
+    border-top: none;
+}
+
+.borderless td, .borderless th {
+    border: none;
+}
+
+.asked {
+  float:right;
+}
