@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stackoverflow 2.0</title>
+  <meta project = "Recreate Stack Overflow Home Page using Bootstrap">
+  <meta authors = "Darryl Mendonez, David Stichter, Sean Conaty, and Shreyans Patel">
+  <!-- Bootstrap CSS-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+  <!-- Bootstrap Optional Theme-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+  <nav class="navbar navbar-inverse"> <!-- Navbar by Shreyans Patel -->
+    <section class="container">
+      <header class="navbar-header">
+        <a href="/" class="navbar-brand">
+          <img src="images/rutgers.png" width="25" />
+        </a>
+      </header>
+      <ul class="nav navbar-nav">
+        <li><a href="inbox.html"><img src="images/inbox.png" width="20"></a></li>
+        <li><a href="messages.html"><img src="images/achievements.png" width="16"></a></li>
+       </ul>
+       <ul class="navbar-form navbar-right" role="search">
+         <div class="form-group">
+           <input type="text" class="form-control" placeholder="Search">
+         </div>
+       </ul>
+    </section>
+  </nav>
+  <section class="container"> <!-- Header by Sean Conaty -->
+    <div class= "col-md-12"> 
+      <nav class="navbar-header">
+        <div class= "img-responsive">
+          <a href="home.html" class="navbar-brand">
+            <img src="images/logo.png" width="100%" />
+          </a>
+        </div>
+      </nav>
+    <div class="navbar-form navbar-right">
+      <button class="btn btn-link">
+        <a href="#" class="btn btn-default active" role="button">Questions</a> 
+        <a href="#" class="btn btn-default active" role="button">Tags</a> 
+        <a href="#" class="btn btn-default active" role="button">Users</a>
+        <a href="#" class="btn btn-default active" role="button">Badges</a> 
+        <a href="#" class="btn btn-default active" role="button">Unanswered</a> 
+        <a href="#" class="btn btn-default active" role="button">Ask Question</a> 
+      </button>
+    </div>
+  </section>
+  <main class = "container"> <!-- Top Questions Table by Darryl Mendonez -->
+    <div class = "row-fluid">
+      <div class = "col-md-5">
+        <h4>Top Questions</h4>
+      </div>
+      <div class = "col-md-5">
+        <ul class="nav nav-tabs">
+          <li role="presentation" class="active"><a href="#">interesting</a></li>
+          <li role="presentation"><a href="#">featured</a></li>
+          <li role="presentation"><a href="#">hot</a></li>
+          <li role="presentation"><a href="#">week</a></li>
+          <li role="presentation"><a href="#">month</a></li>
+        </ul>
+      </div> <!-- End tabs -->
+      <div class = "col-md-3">
+      </div>
+    </div> <!-- End Top Questions row -->
+    <div class = "row"> <!-- begin top questions table -->
+      <div class = "col-md-10">
+        <div class = "panel-body">
+          <form>
+            <div class="form-group">
+              <label for="username">Name</label>
+              <input type="text" class="form-control" id="username" placeholder="Name">
+            </div>
+            <div class="form-group">
+              <label for="useremail">Email address</label>
+              <input type="email" class="form-control" id="useremail" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <label for="userpassword">Password</label>
+              <input type="password" class="form-control" id="userpassword" placeholder="Password">
+            </div>
+            <div class="form-group">
+              <label for="userpasswordcheck">Re-Enter Password</label>
+              <input type="password" class="form-control" id="userpasswordcheck" placeholder="Re-Enter Password">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+        </div> <!-- End panel -->
+      </div> <!-- End 9 columns for Top Questions table -->
+      <aside class="col-md-2"> <!-- Aside Featured and Favorites by David Stichter -->
+        <div class="row">
+          <section class-"list-group">
+            <section class="list-group-item">
+              <h4 class="list-group-item-heading">
+              Featured
+              </h4>
+              <ul>
+                <li><a href="#">Featured 1</a></li>
+                <li><a href="#">Featured 2</a></li>
+                <li><a href="#">Featured 3</a></li>
+                <li><a href="#">Featured 4</a></li>
+              </ul>
+            </section>
+          </section>
+            <section class-"list-group">
+              <section class="list-group-item">
+                <h4 class="list-group-item-heading">
+                Favorites
+                </h4>
+                <ul>
+                  <li><a href="#">Favorite #1</a></li>
+                  <li><a href="#">Favorite #2</a></li>
+                  <li><a href="#">Favorite #3</a></li>
+                  <li><a href="#">Favorite #4</a></li>
+                </ul>
+              </section>
+            </section>  
+            <form>
+              <div class="form-group">
+                <label for="username">Email address</label>
+                <input type="email" class="form-control" id="username" placeholder="Email">
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Password">
+              </div>
+              <button type="submit" class="btn btn-default">Sign In</button>
+              <a href="signup.html" class="btn btn-default">Register</a>
+            </form>     
+          </div>
+        </div>
+      </aside> <!-- End Featured & Favorites aside -->
+    </div> <!-- End row with TQ table and F & F aside -->
+  </main> <!-- End main area -->
+   <!-- JQuery Script (Required for JavaScript Below)-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+   <!-- JavaScript-->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+</body>
+</html>
