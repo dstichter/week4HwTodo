@@ -5,12 +5,8 @@ by Darryl Mendonez, David Stichter, Sean Conaty, and Shreyans Patel */
   text-align: center;
 }
 
-.2nd-line {
-    border-top: none;
-}
-
 .borderless td, .borderless th {
-    border: none;
+    border: none !important;
 }
 
 .asked {
