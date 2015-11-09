@@ -15,3 +15,9 @@ by Darryl Mendonez, David Stichter, Sean Conaty, and Shreyans Patel */
 .asked {
   float:right;
 }
+
+/* Shreyans Patel's CSS styles: */
+
+.navbar-brand {
+  margin-left: 20px;
+}
