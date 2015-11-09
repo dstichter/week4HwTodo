@@ -16,6 +16,10 @@ by Darryl Mendonez, David Stichter, Sean Conaty, and Shreyans Patel */
   float:right;
 }
 
+.header-buttons-text {
+  color: white;
+}
+
 /* Shreyans Patel's CSS styles: */
 
 .navbar-brand {
