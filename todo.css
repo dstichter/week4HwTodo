@@ -1,4 +1,4 @@
-.strike{
+.strike {
   text-decoration: line-through;
 }
 h1{
@@ -7,3 +7,13 @@ h1{
 #alertField{
   background-color: red;
 }
+#todoLabel{
+  text-align: center;
+  padding-bottom: 2px;
+  font-size: 18px;
+}
+#todoTable{
+  font-family: "Arial Black";
+  color: #6CC417;
+}
+

@@ -1,15 +1,16 @@
 $(document).ready(function(){
 $("#alertField").hide()
+
 $("#addTodo").on("focus", function(){
-$("#alertField").hide()
+  $("#alertField").hide()
 });
+
 $(".btn-block").on('click', function(e){
   e.preventDefault();
   if(formCheck() === false){
     return;
   }
   var toAdd = $("#addTodo").val();
-
   var newRow = $("<tr>");
   var createCheckBox = $("<input type='checkbox'>").addClass("checkbox");
   var createDeleteBox = $("<button>").addClass("btn btn-danger").append("X")
@@ -21,19 +22,16 @@ $(".btn-block").on('click', function(e){
 });
 $("table").on("click", ".btn-danger", function() {
   $(this).parent().parent().remove();
-
 });
 $("table").on("click", ".checkbox", function() {
   var row = $(this).parent().parent();
   var td = row.find("td:first")
   if(this.checked === true){
-    td.addClass("strike");
+    $(td).addClass('strike');
     $(this).parent().remove();
+    $(td).attr('colspan',"2");
     return
   }
-
-
-
 });
 
 function formCheck() {
@@ -44,6 +42,5 @@ function formCheck() {
   else{
     return true
   }
-  
 }
 });
