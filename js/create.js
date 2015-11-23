@@ -1,10 +1,11 @@
 $(document).ready(function(){
+//hiding alert
 $("#alertField").hide()
 
 $("#addTodo").on("focus", function(){
   $("#alertField").hide()
 });
-
+//Add
 $(".btn-block").on('click', function(e){
   e.preventDefault();
   if(formCheck() === false){
@@ -20,9 +21,11 @@ $(".btn-block").on('click', function(e){
   newRow.append(todoData).append(todoCB).append(todoDB);
   $("#todoTable").append(newRow);
 });
+//Delete
 $("table").on("click", ".btn-danger", function() {
   $(this).parent().parent().remove();
 });
+//Checkbox
 $("table").on("click", ".checkbox", function() {
   var row = $(this).parent().parent();
   var td = row.find("td:first")
