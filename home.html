@@ -1,40 +1,41 @@
 <!DOCTYPE html>
 <html>
-<head>
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/cyborg/bootstrap.min.css">
-<link href='https://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
   <title>Todo List</title>
   <link rel="stylesheet" type="text/css" href="todo.css">
 </head>
 <body>
-<header>
-  <h1>Todo List</h1>
-</header>
-<div class="container">
-  <div class="row">
-    <div class="col-md-4">
-      <form role="form">
-        <div class="form-group">
-          <div id="todoLabel">
-            <p>Add to ToDo list</p>
+  <header>
+    <h1>Todo List</h1>
+  </header>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <form role="form">
+          <div class="form-group">
+            <div id="todoLabel">
+              <p>Add to ToDo list</p>
+            </div>
+            <input class="form-control" type="text" id="addTodo" autocomplete="off">
+            <button type="submit" class="btn btn-block">Add</button>
           </div>
-          <input class="form-control" type="text" id="addTodo" autocomplete="off">
-          <button type="submit" class="btn btn-block">Add</button>
-        </div>
-        <div id="alertField">
-          <h2>Alert: Field Empty</h2>
-        </div>
-      </form>
-    </div>
-    <div class="col-md-8">
-      <table class="table table-bordered" id="todoTable">
-      <tbody>
-      </tbody>
-      </table>
+          <div id="alertFieldEmpty">
+            <h2>Alert: Field Empty</h2>
+          </div>
+          <div id="alertFieldDuplicate">
+            <h2>Alert: Duplicate</h2>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-8">
+        <table class="table table-bordered" id="todoTable">
+        <tbody>
+        </tbody>
+        </table>
+      </div>
     </div>
   </div>
-</div>
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-<script type="text/javascript" src="js/create.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="js/create.js"></script>
 </body>
 </html>

@@ -1,21 +1,25 @@
 $(document).ready(function(){
 //hiding alert
-$("#alertField").hide()
+var duplicateTest
+$("#alertFieldEmpty").hide()
+$("#alertFieldDuplicate").hide()
 
 $("#addTodo").on("focus", function(){
-  $("#alertField").hide()
+  $("#alertFieldEmpty").hide()
+  $("#alertFieldDuplicate").hide()
 });
 //Add
 $(".btn-block").on('click', function(e){
   e.preventDefault();
   if(formCheck() === false){
+
     return;
   }
   var toAdd = $("#addTodo").val();
   var newRow = $("<tr>");
   var createCheckBox = $("<input type='checkbox'>").addClass("checkbox");
   var createDeleteBox = $("<button>").addClass("btn btn-danger").append("X")
-  var todoData = $("<td>").append(toAdd).addClass("col-md-10")
+  var todoData = $("<td>").append(toAdd).addClass("col-md-10 todoData")
   var todoCB = $("<td>").append(createCheckBox).addClass("col-md-1");
   var todoDB = $("<td>").append(createDeleteBox).addClass("col-md-1");
   newRow.append(todoData).append(todoCB).append(todoDB);
@@ -39,11 +43,22 @@ $("table").on("click", ".checkbox", function() {
 
 function formCheck() {
   if($("#addTodo").val() === ""){
-    $("#alertField").show()
+    $("#alertFieldEmpty").show()
     return false
   }
-  else{
-    return true
+  if(duplicate()){
+    $("#alertFieldDuplicate").show()
+    return false
   }
+  };
+
+function duplicate() {
+
+  $(".todoData").each(function(){
+    if($("#addTodo").val() === $(this).html()){
+      duplicateTest = true
+    }
+  });
+  return duplicateTest
 }
 });

@@ -4,7 +4,10 @@
 h1{
   text-align: center;
 }
-#alertField{
+#alertFieldEmpty{
+  background-color: red;
+}
+#alertFieldDuplicate{
   background-color: red;
 }
 #todoLabel{
